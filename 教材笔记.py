@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+"""
+She35 Editor
+哈哈
+"""
+
+a= 1
+
 
 ## zwQT source文件夹下主要有以下模块：
  zwBacktest.py， zw 量化分析： 回溯测试工具函数，
