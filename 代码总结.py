@@ -1,5 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+She35 Editor
 
-# ÉèÖÃ»æÍ¼¸ñÊ½£º
+"""
+# è®¾ç½®ç»˜å›¾æ ¼å¼ï¼š
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
@@ -7,39 +11,39 @@ plt.rc('figure', figsize=(10, 6))
 mpl.style.use('seaborn-whitegrid')
 
 
-# ÉèÖÃÊä³öĞ¡Êı¸ñÊ½£º
+# è®¾ç½®è¾“å‡ºå°æ•°æ ¼å¼ï¼š
 np.set_printoptions(precision=4)
 pd.set_option('display.width', 450)
 
-# ÉèÖÃnotebookµÄÊä³öĞÎÊ½£ºÒÔ±í¸ñĞÎÊ½Êä³ö£º
+# è®¾ç½®notebookçš„è¾“å‡ºå½¢å¼ï¼šä»¥è¡¨æ ¼å½¢å¼è¾“å‡ºï¼š
 pandas.core.format.set_printoptions(notebook_repr_html=True)
 
 # pandas
 flst=pd.read_csv(fss, dtype=str,encoding='gbk')  
-	"dtype = str ÊÇÒòÎªÓĞĞ©¹ÉÆ±´úÂëÎªÒ»Î»Êı×Ö£¬ÕâÑù000001ÕâÑùµÄ¹ÉÆ±´úÂë»á±»ÊÓÎª 1 £¬ÔÚºóÃæ¼ÆËãÖĞ»á³öÏÖÎÊÌâ¡£"
+	"dtype = str æ˜¯å› ä¸ºæœ‰äº›è‚¡ç¥¨ä»£ç ä¸ºä¸€ä½æ•°å­—ï¼Œè¿™æ ·000001è¿™æ ·çš„è‚¡ç¥¨ä»£ç ä¼šè¢«è§†ä¸º 1 ï¼Œåœ¨åé¢è®¡ç®—ä¸­ä¼šå‡ºç°é—®é¢˜ã€‚"
 
 df10=pd.read_csv(fss,index_col=0,parse_dates=[0]);
-	'ÉèÖÃµÚÒ»ÁĞÎªË÷Òı£¬²¢½âÎöµÚÒ»ÁĞÎªÈÕÆÚĞÍ¸ñÊ½¡£'
+	'è®¾ç½®ç¬¬ä¸€åˆ—ä¸ºç´¢å¼•ï¼Œå¹¶è§£æç¬¬ä¸€åˆ—ä¸ºæ—¥æœŸå‹æ ¼å¼ã€‚'
 
 xd2.drop_duplicates(subset='index', keep='last', inplace=True);
-	'ÒÔ index ÁĞÎª»ù×¼È¥ÖØ£¬±£Áô×îºóÒ»Ïî£¬²¢Ìæ´úÔ´ÎÄ¼ş'
+	'ä»¥ index åˆ—ä¸ºåŸºå‡†å»é‡ï¼Œä¿ç•™æœ€åä¸€é¡¹ï¼Œå¹¶æ›¿ä»£æºæ–‡ä»¶'
 	
 close_px = pd.read_csv('ch09/stock_px.csv', parse_dates=True, index_col=0)
-close_px.info() # ÄÃµ½Êı¾İÊ×ÏÈÓ¦¸ÃÒª×öµÄÊÂÇé¡£
+close_px.info() # æ‹¿åˆ°æ•°æ®é¦–å…ˆåº”è¯¥è¦åšçš„äº‹æƒ…ã€‚
 
 ds5 = ds2.rolling(center=False,window=n).mean() 
-	'ÉèÖÃds5Îª n ÈÕ¾ùÏß'
-	rolling()¼´¶ÔSeriesÓĞĞ§£¬Ò²¶Ô DataFrameÓĞĞ§£¬½ö½öÊÇ¶ÔÊı¾İµÄÔ¤¸ñÊ½»¯¡£¾ÍÏñgroupby()Ò»Ñù
+	'è®¾ç½®ds5ä¸º n æ—¥å‡çº¿'
+	rolling()å³å¯¹Seriesæœ‰æ•ˆï¼Œä¹Ÿå¯¹ DataFrameæœ‰æ•ˆï¼Œä»…ä»…æ˜¯å¯¹æ•°æ®çš„é¢„æ ¼å¼åŒ–ã€‚å°±åƒgroupby()ä¸€æ ·
 		In [12]: s.rolling(window=10)
 		Out[12]: Rolling [window=10,center=False,axis=0]
-	´«Èë 'min_periods= n2£¨n2<n£©'¿ÉÒÔÔÚ n ÈÕÖ®Ç°£¬¿ÉÒÔ¶Ô n2  rolling
+	ä¼ å…¥ 'min_periods= n2ï¼ˆn2<nï¼‰'å¯ä»¥åœ¨ n æ—¥ä¹‹å‰ï¼Œå¯ä»¥å¯¹ n2  rolling
 		s.rolling(window=10, min_periods=5).mean()
-		'ÕâÑù£¬Ç°5-9ÈÕ·Ö±ğÊÇ 6,7,8,9ÈÕ¾ùÏß'
+		'è¿™æ ·ï¼Œå‰5-9æ—¥åˆ†åˆ«æ˜¯ 6,7,8,9æ—¥å‡çº¿'
 
 if not qx.xbarWrk[qx.priceWrk].empty:
-	# ×¢ÒâÕâÀïµÄ empty Ã»ÓĞÀ¨ºÅ¡£
+	# æ³¨æ„è¿™é‡Œçš„ empty æ²¡æœ‰æ‹¬å·ã€‚
 		
-	## reset_index()£º»¹Ô­£¨¶àÖØ£©indexÎªcolumnsÁĞ
+	## reset_index()ï¼šè¿˜åŸï¼ˆå¤šé‡ï¼‰indexä¸ºcolumnsåˆ—
 people = DataFrame(np.random.randn(5, 5),
                    columns=['a', 'b', 'c', 'd', 'e'],
                    index=['Joe', 'Steve', 'Wes', 'Jim', 'Travis'])
@@ -56,41 +60,41 @@ print(test2_reset_index)
 from dateutil import rrule
 from dateutil.parser import parse
 rrule.rrule(rrule.DAILY,dtstart=qx.DTxtim0,until=parse(xtim)).count()
-	'Í³¼Ædtstartµ½untilÖ®¼äµÄÏà²îÌìÊı£¬Èç¹ûµÚÒ»¸ö²ÎÊıÊÇrrule.WEEKLY£¬ÔòÍ³¼ÆÁ½ÕßÖ®¼äµÄÖÜÊı¡£'
-	'parse(xtim)±íÊ¾½âÎöxtimÎªdatetime.datetime(2011, 1, 3, 0, 0)ÀàĞÍ¸ñÊ½¡£'
+	'ç»Ÿè®¡dtstartåˆ°untilä¹‹é—´çš„ç›¸å·®å¤©æ•°ï¼Œå¦‚æœç¬¬ä¸€ä¸ªå‚æ•°æ˜¯rrule.WEEKLYï¼Œåˆ™ç»Ÿè®¡ä¸¤è€…ä¹‹é—´çš„å‘¨æ•°ã€‚'
+	'parse(xtim)è¡¨ç¤ºè§£æxtimä¸ºdatetime.datetime(2011, 1, 3, 0, 0)ç±»å‹æ ¼å¼ã€‚'
 
 	
 # tushare
 import tushare as ts
 xd=ts.get_h_data(xcod,start=tim0,end=None,retry_count=5,pause=1)    
-	'ÓöÍøÂçµÈÎÊÌâÖØ¸´Ö´ĞĞ 5 ´Î£¬ÖØ¸´ÇëÇóÊı¾İ¹ı³ÌÖĞÔİÍ£ 1 ÃëÊı£¬·ÀÖ¹ÇëÇó¼ä¸ôÊ±¼äÌ«¶Ì³öÏÖÎÊÌâ'
+	'é‡ç½‘ç»œç­‰é—®é¢˜é‡å¤æ‰§è¡Œ 5 æ¬¡ï¼Œé‡å¤è¯·æ±‚æ•°æ®è¿‡ç¨‹ä¸­æš‚åœ 1 ç§’æ•°ï¼Œé˜²æ­¢è¯·æ±‚é—´éš”æ—¶é—´å¤ªçŸ­å‡ºç°é—®é¢˜'
 	
 
 
 # numpy
 
-	## np.take Óë np.random.permutation
+	## np.take ä¸ np.random.permutation
 def draw(deck, n=5):
     return deck.take(np.random.permutation(len(deck))[:n])
     # permutation(x):
-    #   x Îªint,·µ»Ø np.arange(x)µÄËæ»úÅÅÁĞ
-    #   x Îªarray,·µ»Ø arrayµÄËæ»úÅÅÁĞ
+    #   x ä¸ºint,è¿”å› np.arange(x)çš„éšæœºæ’åˆ—
+    #   x ä¸ºarray,è¿”å› arrayçš„éšæœºæ’åˆ—
 
 	
 
-# groupby Èı¸öº¯Êı agg,transform, apply ×Ü½á
-1. aggregate£¨»òagg£©£º
-    - ´«Èëµ¥¸öº¯Êı: grouped[col1,col2].agg(func)
-    - ´«Èëº¯Êı×é³ÉµÄÁĞ±í£ºgrouped[col1,col2].agg([func1,func2])
-    - ´«Èë(name,func)×é³ÉµÄÁĞ±í£ºgrouped[col1,col2].agg([(name1,func1),(name2,func2)]):Êä³ö½á¹ûstr(name1)´úÌæstr(func1)
-    - ´«Èë×Öµä£ºgrouped.agg({col1:[func1,func2],col2:fnc3}):¶Ô²»Í¬µÄÁĞÓ¦ÓÃ²»Í¬µÄº¯Êı**×¢ÒâÕâÀïµÄ colµÄÎ»ÖÃ**
-    - ¶Ô±í9-1µÄÄÚ½¨º¯Êıº¯Êıfunc£¬±ØĞë´«Èëº¯ÊıÃûstr(func)£¬·ñÔò±»ÈÏÎªÊÇ×Ô¶¨ÒåµÄº¯Êı
-    - ¶ÔtransformµÄµÚ¶şÖÖĞÎÊ½µÄº¯Êı²»Ö§³Ö(ÒòÎªËüÃ»ÓĞgroupĞ§¹û)¡£
+# groupby ä¸‰ä¸ªå‡½æ•° agg,transform, apply æ€»ç»“
+1. aggregateï¼ˆæˆ–aggï¼‰ï¼š
+    - ä¼ å…¥å•ä¸ªå‡½æ•°: grouped[col1,col2].agg(func)
+    - ä¼ å…¥å‡½æ•°ç»„æˆçš„åˆ—è¡¨ï¼šgrouped[col1,col2].agg([func1,func2])
+    - ä¼ å…¥(name,func)ç»„æˆçš„åˆ—è¡¨ï¼šgrouped[col1,col2].agg([(name1,func1),(name2,func2)]):è¾“å‡ºç»“æœstr(name1)ä»£æ›¿str(func1)
+    - ä¼ å…¥å­—å…¸ï¼šgrouped.agg({col1:[func1,func2],col2:fnc3}):å¯¹ä¸åŒçš„åˆ—åº”ç”¨ä¸åŒçš„å‡½æ•°**æ³¨æ„è¿™é‡Œçš„ colçš„ä½ç½®**
+    - å¯¹è¡¨9-1çš„å†…å»ºå‡½æ•°å‡½æ•°funcï¼Œå¿…é¡»ä¼ å…¥å‡½æ•°åstr(func)ï¼Œå¦åˆ™è¢«è®¤ä¸ºæ˜¯è‡ªå®šä¹‰çš„å‡½æ•°
+    - å¯¹transformçš„ç¬¬äºŒç§å½¢å¼çš„å‡½æ•°ä¸æ”¯æŒ(å› ä¸ºå®ƒæ²¡æœ‰groupæ•ˆæœ)ã€‚
 2. transform:
-    - ´«ÈëµÄº¯Êı¿ÉÒÔ¾ßÓĞ·Ö×éĞ§¹û£¬Èçnp.mean,ÄÇÃ´½á¹ûÊÇagg(np.mean)µÄÕ¹¿ª¡£
-    - ´«ÈëµÄº¯ÊıÒ²¿ÉÒÔÊÇÓĞ·Ö×é¹¦ÄÜµ«ÊÇÃ»ÓĞ·Ö×éĞ§¹ûµÄ£¬Èç lambda x: x - x.mean ¡£·µ»ØµÄÃ»ÓĞ·Ö×éĞ§¹ûµ«ÓĞ·Ö×éÔËËãµÄDataFrame
+    - ä¼ å…¥çš„å‡½æ•°å¯ä»¥å…·æœ‰åˆ†ç»„æ•ˆæœï¼Œå¦‚np.mean,é‚£ä¹ˆç»“æœæ˜¯agg(np.mean)çš„å±•å¼€ã€‚
+    - ä¼ å…¥çš„å‡½æ•°ä¹Ÿå¯ä»¥æ˜¯æœ‰åˆ†ç»„åŠŸèƒ½ä½†æ˜¯æ²¡æœ‰åˆ†ç»„æ•ˆæœçš„ï¼Œå¦‚ lambda x: x - x.mean ã€‚è¿”å›çš„æ²¡æœ‰åˆ†ç»„æ•ˆæœä½†æœ‰åˆ†ç»„è¿ç®—çš„DataFrame
 3. apply:
-    - apply(func),¶ÔfuncÏÈ·Ö×éÔËËã£¬È»ºóÔÙµş¼ÓÆğÀ´£¬Òò´Ë¶Ôtransform µÄÁ½ÖÖº¯Êı¶¼Ö§³Ö¡£    
-    - apply(func, *args, **kwargs),Èçapply(top, n=1, column='total_bill') ºóÃæÁ½¸öÊÇ top µÄ²ÎÊı
-    - ´«Èë lambda x:{'min': x.min(), 'max': x.max(), 'count': x.count(), 'mean': x.mean()} ¶ÔÃ¿Ò»×é·µ»Ø4ĞĞgroupÊı¾İ
+    - apply(func),å¯¹funcå…ˆåˆ†ç»„è¿ç®—ï¼Œç„¶åå†å åŠ èµ·æ¥ï¼Œå› æ­¤å¯¹transform çš„ä¸¤ç§å‡½æ•°éƒ½æ”¯æŒã€‚    
+    - apply(func, *args, **kwargs),å¦‚apply(top, n=1, column='total_bill') åé¢ä¸¤ä¸ªæ˜¯ top çš„å‚æ•°
+    - ä¼ å…¥ lambda x:{'min': x.min(), 'max': x.max(), 'count': x.count(), 'mean': x.mean()} å¯¹æ¯ä¸€ç»„è¿”å›4è¡Œgroupæ•°æ®
 
